@@ -1,0 +1,32 @@
+{
+  "name": "node_rest_api",
+  "version": "1.0.0",
+  "description": "Node.js Restful CRUD API with Node.js, Express and MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IhorChugurov/Node-express-web-api.git"
+  },
+  "type": "module",
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "rest",
+    "api"
+  ],
+  "author": "ihorchugurov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IhorChugurov/Node-express-web-api/issues"
+  },
+  "homepage": "https://github.com/IhorChugurov/Node-express-web-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10"
+  }
+}
