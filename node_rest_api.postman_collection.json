@@ -1,0 +1,95 @@
+{
+	"variables": [],
+	"info": {
+		"name": "node_rest_api",
+		"_postman_id": "2fd8b9c9-b676-a3bd-cc9c-26fcef8d4958",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a new Items",
+			"request": {
+				"url": "localhost:3030/api/collections/item",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nameL\":{\"uk\":\"Node #1\"},\n\t\"descL\":{\"uk\":\"desc for node #1\"}\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve all Items",
+			"request": {
+				"url": "localhost:3030/api/collections/item",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update an Item",
+			"request": {
+				"url": "localhost:3030/api/collections/item/62581bb297bfebde9be7bab7",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nameL\":{\n\t\t\"uk\":\"Node #1 Modified\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a single Item",
+			"request": {
+				"url": "localhost:3030/api/collections/item/62581bb297bfebde9be7bab7",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an Item",
+			"request": {
+				"url": "localhost:3030/api/collections/item/62581e4c584bf3a2cf605ad2",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all Items",
+			"request": {
+				"url": "localhost:3030/api/collections/item",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
