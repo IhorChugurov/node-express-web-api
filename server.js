@@ -17,10 +17,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Importing index.js creating earlier
-// #3 in diagram
+// #2 in diagram
 import db from "./app/models/index.js";
 // Connecting to MongoDB using Mongoose
-// #4 in diagram
+// #3 in diagram
 db.mongoose
     .connect(db.url, {
         useNewUrlParser: true,
@@ -40,12 +40,12 @@ app.get("/", (req, res) => {
 });
 
 // Importing item.routes.js creating earlier
-// #7 in diagram
+// #6 in diagram
 import router from "./app/routes/item.routes.js";
 app.use('/api/collections/item', router);
 
 
-// set port, listen for requests
+// Set port, listen for requests
 const PORT = process.env.PORT || 3030;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);

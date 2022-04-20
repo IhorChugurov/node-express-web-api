@@ -12,11 +12,11 @@ import { dirname } from 'path';
 const dn = dirname(new URL(import.meta.url).pathname);
 // Removing the leading slash on Windows
 const __dirname = process.platform === 'win32' ? dn.substr(1) : dn ;
-// #1 in diagram
+// Creating general db object and add configurations in it
 const db = {...dbConfig};
 db.mongoose = mongoose;
-// Reading all files with models into memory from __dirname
-// #2 in diagram
+// Reading all files with models from __dirname and writing in db {}
+// #1 in diagram
 fs.readdirSync(__dirname ).forEach( async (file) => {
     if(file!=='index.js'){
         let name = file.split('.')[0];

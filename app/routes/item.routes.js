@@ -1,4 +1,4 @@
-// #6 in diagram
+// #5 in diagram
 import itemsController from '../controllers/item.controller.js';
 import express from 'express';
 const router = express.Router();

@@ -15,5 +15,5 @@ schema.method("toJSON", function() {
     return object;
 });
 // Calling the model constructor and exporting link on model
-// #5 in diagram
+// #4 in diagram
 export default mongoose.model("item", schema);
