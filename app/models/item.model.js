@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 // Defining Mongoose schema
+// #4 in diagram
 const schema = mongoose.Schema(
     {
         nameL: {},
@@ -15,5 +16,5 @@ schema.method("toJSON", function() {
     return object;
 });
 // Calling the model constructor and exporting link on model
-// #4 in diagram
+// #5 in diagram
 export default mongoose.model("item", schema);

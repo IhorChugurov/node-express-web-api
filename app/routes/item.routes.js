@@ -1,6 +1,9 @@
-// #5 in diagram
 import itemsController from '../controllers/item.controller.js';
 import express from 'express';
+// Creating a router as a module, loading a middleware functions in it,
+// defining routes, and mountings the router module on a path in the main app.
+// It's needed to routing pathes after /api/collections/item path
+// #7 in diagram
 const router = express.Router();
 // Create and Save a new Item
 router.post("/", itemsController.createOne);

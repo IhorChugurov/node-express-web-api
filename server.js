@@ -17,10 +17,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Importing index.js creating earlier
-// #2 in diagram
+// We need this import only for getting url
+// #3 in diagram
 import db from "./app/models/index.js";
 // Connecting to MongoDB using Mongoose
-// #3 in diagram
 db.mongoose
     .connect(db.url, {
         useNewUrlParser: true,

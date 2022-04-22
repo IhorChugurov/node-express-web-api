@@ -16,12 +16,14 @@ const __dirname = process.platform === 'win32' ? dn.substr(1) : dn ;
 const db = {...dbConfig};
 db.mongoose = mongoose;
 // Reading all files with models from __dirname and writing in db {}
-// #1 in diagram
 fs.readdirSync(__dirname ).forEach( async (file) => {
     if(file!=='index.js'){
         let name = file.split('.')[0];
         // Dynamic module import
+        // #1 in diagram
         const { default: initModel } = await import('./' + file);
+        // Reading models into db object
+        // #2 in diagram
         db[name]=initModel;
     };
 });

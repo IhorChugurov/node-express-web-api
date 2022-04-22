@@ -1,5 +1,6 @@
 import db from "../models/index.js";
 const controller = {};
+// Variable to determine the required model
 const name = "item";
 // Create and Save a new Item
 controller.createOne = (req, res) => {
